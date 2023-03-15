@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--<div class="background_image" style="background-image:url(https://1.bp.blogspot.com/-S6jFmpbgzHA/XZYGToPEoEI/AAAAAAAAmCs/5omQruzvMEsy-GpHJ_TB56zoJoBqSvhdQCNcBGAsYHQ/s1600/Alone%2BImages%2BWhatsapp%2BDp%2B%25281%2529.jpeg);"></div>-->
+<head>
+    <meta charset="UTF-8">
+    <title>LOGIN</title>
+    <style>
+
+body{
+  font-family:sans-serif;
+       text-align:center;
+    background-image:url('/media/bgd.jpg');
+     background-repeat: no-repeat;
+        background-size: cover;
+}
+
+*{
+
+ text-align:center;
+  color:white;
+padding:55px;
+}
+input{
+font-family:arial-black;
+border: 2px solid Black;
+margin: 5px 20px 22px 20px ;
+  display: inline-block;
+  padding:15px;
+  width:200px;
+  color:black;
+  background-color:white;
+  }
+
+input[type=text], input[type=password] {
+color:black;
+  width: 10%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}s
+label{
+padding:20px;
+  width:35%;
+  font-size:20px;
+<!--  font-style:bold;-->
+  font-family:arial-black;
+
+
+}
+<!--button{-->
+<!--padding:20px;-->
+<!--width:200px-->
+<!--}-->
+<!--button {-->
+<!--  background-color: white;-->
+<!--  color: black;-->
+<!--  padding: 10px 15px;-->
+<!--  margin: 8px 0;-->
+<!--  border: none;-->
+<!--  cursor: pointer;-->
+<!--  position:Absolute;-->
+
+<!--}-->
+</style>
+</head>
+<body>
+<!--<div class="background_image" style="background-image:url(https://1.bp.blogspot.com/-S6jFmpbgzHA/XZYGToPEoEI/AAAAAAAAmCs/5omQruzvMEsy-GpHJ_TB56zoJoBqSvhdQCNcBGAsYHQ/s1600/Alone%2BImages%2BWhatsapp%2BDp%2B%25281%2529.jpeg);  background-attachment: fixed;-->
+<!--background-size: cover;  background-repeat: no-repeat;"></div>-->
+
+<form action="" method="POST" >
+    {% csrf_token %}
+    <label>Username</label>
+    <input type="text" name="username" placeholder="Enter your username"><br><br>
+    <label>Password</label>
+    <input type="password" name="password" placeholder="Enter your password"><br><br>
+    <input type="submit" name="login" style="text-align:center">
+</form>
+{% for msg in messages %}
+<h2>{{msg}}</h2>
+{% endfor %}
+</body>
+</html>
